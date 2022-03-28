@@ -9,6 +9,8 @@
 
     <!-- 尾部 -->
     <TheFooter></TheFooter>
+
+    <el-backtop></el-backtop>
   </div>
 </template>
 

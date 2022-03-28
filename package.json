@@ -12,6 +12,7 @@
     "element-ui": "^2.15.6",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
+    "vuejs-scroll-fixed-header": "^1.0.3",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

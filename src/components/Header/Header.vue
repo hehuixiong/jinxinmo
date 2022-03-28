@@ -35,11 +35,16 @@
         </div>
       </div>
     </div>
+    <fixed-top-header></fixed-top-header>
   </div>
 </template>
 <script>
+import FixedTopHeader from './components/FixedTopHeader'
 export default {
-  name: 'TheHeader'
+  name: 'TheHeader',
+  components: {
+    FixedTopHeader
+  }
 }
 </script>
 <style lang="less" scoped>
@@ -75,14 +80,14 @@ export default {
   .header-nav{
     margin-left: 230px;
     ul{
-      margin-top: 30px;
       display: flex;
+      margin-top: 10px;
       li{
         margin-right: 40px;
         a{
           color: #ffffff;
-          padding: 20px 0;
           display: inline-block;
+          line-height: 100px;
         }
         a:hover{
           color: #d1b02c;

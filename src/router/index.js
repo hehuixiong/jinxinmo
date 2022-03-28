@@ -57,7 +57,11 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior () {
+    document.documentElement.scrollTop = window.pageYOffset = document.body.scrollTop = 0
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router
