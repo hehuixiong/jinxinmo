@@ -1,22 +1,56 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  /** 首页 */
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: () => import(/* webpackChunkName: "home" */ '../views/home/home.vue')
   },
+  /** 应用领域 */
+  {
+    path: '/apply',
+    name: 'apply',
+    component: () => import(/* webpackChunkName: "apply" */ '../views/apply/apply.vue')
+  },
+  /** 联系我们 */
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/contact/contact.vue')
+  },
+  /** 膜材介绍 */
+  {
+    path: '/introduce',
+    name: 'introduce',
+    component: () => import(/* webpackChunkName: "introduce" */ '../views/introduce/introduce.vue')
+  },
+  /** 服务能力 */
+  {
+    path: '/serves',
+    name: 'serves',
+    component: () => import(/* webpackChunkName: "serves" */ '../views/serves/serves.vue')
+  },
+  /** 新闻中心 */
+  {
+    path: '/news',
+    name: 'news',
+    component: () => import(/* webpackChunkName: "news" */ '../views/news/news.vue')
+  },
+  /** 解决方案 */
+  {
+    path: '/solution',
+    name: 'solution',
+    component: () => import(/* webpackChunkName: "solution" */ '../views/solution/solution.vue')
+  },
+  /** 关于金鑫 */
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/about/about.vue')
   }
 ]
 
