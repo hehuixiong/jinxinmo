@@ -1,4 +1,4 @@
-# jinxinmo
+# demo
 
 ## Project setup
 ```

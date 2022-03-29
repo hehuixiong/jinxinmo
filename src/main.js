@@ -2,14 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import ScrollFixedHeader from 'vuejs-scroll-fixed-header'
 
-import '@/plugins/elementui.js'
-import 'element-ui/lib/theme-chalk/index.css'
-import '@/assets/styles/index.less'
+import '@/plugins/element-ui.js'
+import '@/plugins/vuejs-scroll-fixed-header.js'
+import '@/assets/styles/index.scss'
 
 Vue.config.productionTip = false
-Vue.use(ScrollFixedHeader)
 
 new Vue({
   router,

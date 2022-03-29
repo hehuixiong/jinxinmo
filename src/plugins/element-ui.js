@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import '../assets/styles/element-variables.scss'
 
 import {
   Carousel,

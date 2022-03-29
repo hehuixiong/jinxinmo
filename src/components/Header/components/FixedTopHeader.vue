@@ -56,12 +56,12 @@ export default {
   methods: {
     scroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset || 0
-      this.fixed = scrollTop > 200
+      this.fixed = scrollTop > 110
     }
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 #FixedTopHeader{
   position: relative;
   .header-bg{
@@ -101,8 +101,9 @@ export default {
           padding: 20px 0;
           display: inline-block;
         }
+        .router-link-exact-active,
         a:hover{
-          color: #d1b02c;
+          color: $main-color;
         }
       }
     }

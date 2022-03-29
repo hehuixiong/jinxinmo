@@ -47,7 +47,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 #Header{
   position: relative;
   .header-bg{
@@ -89,8 +89,9 @@ export default {
           display: inline-block;
           line-height: 100px;
         }
+        .router-link-exact-active,
         a:hover{
-          color: #d1b02c;
+          color: $main-color;
         }
       }
     }

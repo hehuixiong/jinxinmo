@@ -1,7 +1,8 @@
 <template>
-  <div id="About" style="padding-top: 120px">
+  <div id="About">
+    <img src="./images/about-bg.png" alt="">
     <div class="wrap">
-      关于我们
+      <h1>关于金鑫</h1>
       <h1>...</h1>
       <h1>...</h1>
       <h1>...</h1>
