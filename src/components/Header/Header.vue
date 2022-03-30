@@ -1,9 +1,9 @@
 <template>
-  <div id="Header">
+  <header id="Header" :class="{fixed}">
     <div class="header-bg">
       <div class="wrap">
-        <div class="header-logo" @click="$router.push('/')">
-          <img src="@/assets/images/logo.png" alt="">
+        <div class="header-logo">
+          <img @click="$router.push('/')" src="@/assets/images/logo.png" alt="">
         </div>
         <div class="header-nav">
           <ul>
@@ -35,63 +35,98 @@
         </div>
       </div>
     </div>
-    <fixed-top-header></fixed-top-header>
-  </div>
+  </header>
 </template>
 <script>
-import FixedTopHeader from './components/FixedTopHeader'
 export default {
   name: 'TheHeader',
-  components: {
-    FixedTopHeader
+  data () {
+    return {
+      fixed: false
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.scroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.scroll)
+  },
+  methods: {
+    scroll () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset || 0
+      this.fixed = scrollTop > 110
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
 #Header{
   position: relative;
+  z-index: 99999;
   .header-bg{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0px;
     width: 100%;
     height: 100px;
-    padding-bottom: 11px;
-    z-index: 9999999;
-    background: url(./images/bg-header.png) repeat-x left bottom;
-    background: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+    transition: 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
     .wrap{
       display: flex;
       align-items: center;
       height: 100%;
     }
   }
+  &.fixed .header-bg{
+    background: #ffffff;
+    border-bottom: 1px solid #f1f1f1;
+    height: 60px!important;
+    .header-logo{
+      img{
+        transform: scale(0.6);
+      }
+    }
+  }
   .header-logo{
-    cursor: pointer;
-    width: 88px;
-    height: 88px;
-    margin-top: 10px;
+    width: 400px;
+    position: relative;
+    z-index: 0;
     img{
-      width: 88px;
-      height: 88px;
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+      transition: 0.3s ease-out;
     }
   }
   .header-nav{
-    margin-left: 230px;
     ul{
       display: flex;
-      margin-top: 10px;
       li{
         margin-right: 40px;
         a{
-          color: #ffffff;
+          color: #184369;
           display: inline-block;
-          line-height: 100px;
+          position: relative;
+          font-size: 16px;
+          &::before{
+            position: absolute;
+            content: '/';
+            right: -20px;
+            top: 0;
+            color: #184369;
+          }
         }
         .router-link-exact-active,
         a:hover{
-          color: $main-color;
+          color: $--color-primary;
+        }
+        &:last-child{
+          a::before{
+            display: none;
+          }
         }
       }
     }

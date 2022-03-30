@@ -1,56 +1,25 @@
 <template>
   <div id="Home">
-    <TheBanner></TheBanner>
+    <TheBanner ref="banner"></TheBanner>
     <div class="wrap">
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
-      <h1>...</h1>
+      <TheNotice></TheNotice>
+      <TheNews></TheNews>
+      <TheSolution></TheSolution>
     </div>
   </div>
 </template>
 <script>
 import TheBanner from './components/TheBanner'
+import TheSolution from './components/TheSolution'
+import TheNotice from './components/TheNotice'
+import TheNews from './components/TheNews'
 export default {
   name: 'HomePage',
   components: {
-    TheBanner
+    TheBanner,
+    TheSolution,
+    TheNotice,
+    TheNews
   }
 }
 </script>

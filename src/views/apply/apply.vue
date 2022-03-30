@@ -1,6 +1,24 @@
 <template>
-  <div id="Apply" style="padding-top: 120px">
-    <div class="wrap">应用领域</div>
+  <div id="Apply">
+    <img src="@/assets/images/banner.png" alt="">
+    <div class="wrap">
+      <h1>应用领域</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+    </div>
   </div>
 </template>
 <script>
@@ -8,3 +26,11 @@ export default {
   name: 'ApplyPage'
 }
 </script>
+<style lang="scss" scoped>
+#Apply{
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+</style>

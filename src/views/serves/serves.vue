@@ -1,6 +1,24 @@
 <template>
-  <div id="Serves" style="padding-top: 120px">
-    <div class="wrap">服务能力</div>
+  <div id="Serves">
+    <img src="@/assets/images/banner.png" alt="">
+    <div class="wrap">
+      <h1>服务能力</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+      <h1>...</h1>
+    </div>
   </div>
 </template>
 <script>
@@ -8,3 +26,11 @@ export default {
   name: 'ServesPage'
 }
 </script>
+<style lang="scss" scoped>
+#Serves{
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+</style>
