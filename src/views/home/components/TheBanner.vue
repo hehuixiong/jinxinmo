@@ -1,7 +1,7 @@
 <template>
   <div id="Banner" :class="{show}">
     <div class="carousel" @mouseenter="show = true" @mouseleave="show = false">
-      <el-carousel :interval="200000" height="800px">
+      <el-carousel arrow="always" :interval="200000" height="800px">
         <el-carousel-item v-for="(item, index) in banner" :key="index">
           <img :src="item" alt="">
         </el-carousel-item>

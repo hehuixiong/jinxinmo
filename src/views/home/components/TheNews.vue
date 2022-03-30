@@ -142,13 +142,20 @@ export default {
         .image{
           width: 50%;
           height: 252px;
+          overflow: hidden;
           img{
             width: 100%;
             height: 100%;
+            transition: .3s ease-out;
           }
         }
         .news-content{
           width: 50%;
+        }
+        &:hover{
+          .image img{
+            transform: scale(1.2);
+          }
         }
       }
       .news-wrapper{
