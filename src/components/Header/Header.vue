@@ -63,28 +63,28 @@
     >
       <div class="drawer-nav">
         <div class="item">
-          <router-link to="/">首页</router-link>
+          <router-link to="/"> <span>首页</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/apply">应用领域</router-link>
+          <router-link to="/apply"> <span>应用领域</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/serves">服务能力</router-link>
+          <router-link to="/serves"> <span>服务能力</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/solution">解决方案</router-link>
+          <router-link to="/solution"> <span>解决方案</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/introduce">膜材介绍</router-link>
+          <router-link to="/introduce"> <span>膜材介绍</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/news">新闻中心</router-link>
+          <router-link to="/news"> <span>新闻中心</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/about">关于金鑫</router-link>
+          <router-link to="/about"> <span>关于金鑫</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
         <div class="item">
-          <router-link to="/contact">联系我们</router-link>
+          <router-link to="/contact"> <span>联系我们</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
       </div>
     </el-drawer>
@@ -261,10 +261,18 @@ $menu-animation-duration: .3s;
   .item{
     line-height: 40px;
     padding-left: 20px;
+    padding-right: 20px;
     a{
       color: #333333;
       display: flex;
       width: 100%;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i{
+        font-size: 18px;
+      }
     }
     .router-link-exact-active,
     a:hover{
