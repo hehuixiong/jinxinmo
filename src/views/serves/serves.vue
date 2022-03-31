@@ -1,7 +1,7 @@
 <template>
   <div id="Serves">
     <img src="@/assets/images/banner.png" alt="">
-    <div class="wrap">
+    <div class="container">
       <h1>服务能力</h1>
       <h1>...</h1>
       <h1>...</h1>

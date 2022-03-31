@@ -1,7 +1,7 @@
 <template>
   <div id="Contact">
     <img src="@/assets/images/banner.png" alt="">
-    <div class="wrap">
+    <div class="container">
       <h1>联系我们</h1>
       <h1>...</h1>
       <h1>...</h1>

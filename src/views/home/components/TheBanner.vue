@@ -1,22 +1,22 @@
 <template>
   <div id="Banner" :class="{show}">
-    <div class="carousel" @mouseenter="show = true" @mouseleave="show = false">
-      <el-carousel arrow="always" :interval="200000" height="800px">
+    <div @mouseenter="show = true" @mouseleave="show = false">
+      <el-carousel arrow="always" indicator-position="none" :interval="4000000">
         <el-carousel-item v-for="(item, index) in banner" :key="index">
           <img :src="item" alt="">
+          <div class="banner-bg hidden-xs-only hidden-sm-only hidden-md-only" v-show="show" @mouseenter="show = true">
+            <div class="container">
+              <div class="banner-box">
+                <div class="title">景观设施膜结构案例</div>
+                <p>金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院</p>
+                <div class="more">
+                  <span><span>查看更多</span> <i class="el-icon-arrow-right"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </el-carousel-item>
       </el-carousel>
-    </div>
-    <div class="banner-bg" v-show="show" @mouseenter="show = true">
-      <div class="wrap">
-        <div class="banner-box">
-          <div class="title">景观设施膜结构案例</div>
-          <p>金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院</p>
-          <div class="more">
-            <span><span>查看更多</span> <i class="el-icon-arrow-right"></i></span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -40,29 +40,29 @@ export default {
 <style lang="scss">
 #Banner{
   position: relative;
-  .carousel{
-    width: 100%;
-    height: 800px;
-  }
-  img{
-    height: 100%;
-    width: 100%;
+  .el-carousel{
+    img{
+      height: 100%;
+      width: 100%;
+    }
   }
   .banner-bg{
-    position: absolute;
-    top: 230px;
-    left: 50%;
-    transform: translateX(-50%);
+    .container{
+      position: absolute;
+      top: 23%;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+    }
   }
   .banner-box{
-    width: 430px;
-    height: 300px;
+    width: 400px;
+    height: 270px;
     background: rgba(236, 167, 59, 0.8);
     color: #ffffff;
     display: inline-flex;
     flex-direction: column;
     padding: 50px 40px;
-    box-sizing: border-box;
     .title{
       font-weight: bold;
       font-size: 30px;
@@ -92,6 +92,41 @@ export default {
       font-weight: bold;
       font-size: 16px;
     }
+  }
+}
+@media (min-width: 375px) {
+  .el-carousel__container {
+    height: 150px!important;
+  }
+}
+
+@media (min-width: 576px) {
+  .el-carousel__container {
+    height: 200px!important;
+  }
+}
+
+@media (min-width: 768px) {
+  .el-carousel__container {
+    height: 300px!important;
+  }
+}
+
+@media (min-width: 992px) {
+  .el-carousel__container {
+    height: 400px!important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .el-carousel__container {
+    height: 600px!important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .el-carousel__container {
+    height: 800px!important;
   }
 }
 </style>

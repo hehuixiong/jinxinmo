@@ -1,12 +1,12 @@
 <template>
   <div id="Solution">
     <div class="solution-title">
-      <strong>解决方案</strong>
-      <span>Solution</span>
+      <strong>应用领域</strong>
+      <span>Apply</span>
     </div>
     <div class="solution-content">
-      <ul>
-        <li v-for="(item, index) in solution" :key="index">
+      <el-row>
+        <el-col :xs="24" :sm="12" :md="12" :lg="6" :xl="6" v-for="(item, index) in solution" :key="index">
           <div class="solution-image">
             <img src="../images/case1.png" alt="">
             <div class="zhezhao">
@@ -18,8 +18,8 @@
             <b><span>{{item.con}}</span></b>
             <p>&nbsp;</p>
           </div>
-        </li>
-      </ul>
+        </el-col>
+      </el-row>
       <div class="more">
         <router-link to="/">
           <span>
@@ -105,14 +105,11 @@ export default {
   }
   .solution-content{
     margin-top: 10px;
-    ul{
-      display: flex;
-      flex-wrap: wrap;
+    .el-row{
       margin: 0 -10px;
-      li{
-        width: calc(25% - 20px);
-        margin: 0 10px 20px;
+      .el-col{
         cursor: pointer;
+        padding: 0 10px 20px;
         .solution-image{
           position: relative;
           overflow: hidden;

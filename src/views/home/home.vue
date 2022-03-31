@@ -1,7 +1,7 @@
 <template>
   <div id="Home">
     <TheBanner ref="banner"></TheBanner>
-    <div class="wrap">
+    <div class="container">
       <TheNotice></TheNotice>
       <TheNews></TheNews>
       <TheSolution></TheSolution>

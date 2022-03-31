@@ -1,7 +1,7 @@
 <template>
   <div id="Apply">
     <img src="@/assets/images/banner.png" alt="">
-    <div class="wrap">
+    <div class="container">
       <h1>应用领域</h1>
       <h1>...</h1>
       <h1>...</h1>

@@ -1,7 +1,7 @@
 <template>
   <div id="About">
     <img src="@/assets/images/banner.png" alt="">
-    <div class="wrap">
+    <div class="container">
       <h1>关于金鑫</h1>
       <h1>...</h1>
       <h1>...</h1>
