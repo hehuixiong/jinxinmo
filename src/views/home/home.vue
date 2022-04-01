@@ -4,20 +4,20 @@
     <div class="container">
       <TheNotice></TheNotice>
       <TheNews></TheNews>
-      <TheSolution></TheSolution>
+      <TheApply></TheApply>
     </div>
   </div>
 </template>
 <script>
 import TheBanner from './components/TheBanner'
-import TheSolution from './components/TheSolution'
+import TheApply from './components/TheApply'
 import TheNotice from './components/TheNotice'
 import TheNews from './components/TheNews'
 export default {
   name: 'HomePage',
   components: {
     TheBanner,
-    TheSolution,
+    TheApply,
     TheNotice,
     TheNews
   }

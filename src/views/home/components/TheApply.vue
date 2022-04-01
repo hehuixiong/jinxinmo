@@ -1,19 +1,19 @@
 <template>
-  <div id="Solution">
-    <div class="solution-title">
+  <div id="Apply">
+    <div class="apply-title">
       <strong>应用领域</strong>
       <span>Apply</span>
     </div>
-    <div class="solution-content">
+    <div class="apply-content">
       <el-row>
-        <el-col :xs="24" :sm="12" :md="12" :lg="6" :xl="6" v-for="(item, index) in solution" :key="index">
-          <div class="solution-image">
+        <el-col :xs="24" :sm="12" :md="12" :lg="6" :xl="6" v-for="(item, index) in apply" :key="index">
+          <div class="apply-image">
             <img src="../images/case1.png" alt="">
             <div class="zhezhao">
               <div class="desc">{{item.desc}}</div>
             </div>
           </div>
-          <div class="solution-con">
+          <div class="apply-con">
             <em><i class="el-icon-arrow-right"></i></em>
             <b><span>{{item.con}}</span></b>
             <p>&nbsp;</p>
@@ -35,7 +35,7 @@
 export default {
   data () {
     return {
-      solution: [
+      apply: [
         {
           image: require('../images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
@@ -82,9 +82,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-#Solution{
+#Apply{
   padding-bottom: 50px;
-  .solution-title{
+  .apply-title{
     padding-bottom: 16px;
     line-height: 1;
     padding-top: 30px;
@@ -103,14 +103,14 @@ export default {
       color: #8f8f8f;
     }
   }
-  .solution-content{
+  .apply-content{
     margin-top: 10px;
     .el-row{
       margin: 0 -10px;
       .el-col{
         cursor: pointer;
         padding: 0 10px 20px;
-        .solution-image{
+        .apply-image{
           position: relative;
           overflow: hidden;
           img{
@@ -137,7 +137,7 @@ export default {
             }
           }
         }
-        .solution-con{
+        .apply-con{
           display: block;
           position: relative;
           padding: 16px 0 16px 20px;
@@ -194,7 +194,7 @@ export default {
           }
         }
         &:hover{
-          .solution-image{
+          .apply-image{
             img{
               transform: scale(1.2)
             }
@@ -203,7 +203,7 @@ export default {
               opacity: 1;
             }
           }
-          .solution-con{
+          .apply-con{
             em{
               i{
                 transform: translateX(0);

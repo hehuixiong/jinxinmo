@@ -9,7 +9,14 @@ import {
   Icon,
   Drawer,
   Row,
-  Col
+  Col,
+  Form,
+  FormItem,
+  Input,
+  Button,
+  Card,
+  Breadcrumb,
+  BreadcrumbItem
 } from 'element-ui'
 
 Vue.use(Carousel)
@@ -19,3 +26,10 @@ Vue.use(Icon)
 Vue.use(Drawer)
 Vue.use(Row)
 Vue.use(Col)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+Vue.use(Button)
+Vue.use(Card)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)

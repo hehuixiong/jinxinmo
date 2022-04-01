@@ -58,7 +58,7 @@
       :before-close="close"
       :show-close="false"
       :with-header="false"
-      custom-class="self-drawer"
+      custom-class="drawer-wrapper hidden-md-and-up"
       :modal="false"
     >
       <div class="drawer-nav">
@@ -157,13 +157,13 @@ $menu-animation-duration: .3s;
     position: relative;
     display: flex;
     align-items: center;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
     transition: 0.3s ease-out;
     img{
-      width: 100%;
-      height: 100%;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
     }
   }
   .header-nav{
@@ -219,11 +219,15 @@ $menu-animation-duration: .3s;
       width: 50px;
       height: 50px;
     }
+    .logo{
+      cursor: pointer;
+    }
     .menu{
       display: inline-flex;
       flex-direction: column;
       justify-content: space-around;
       height: $menu-size;
+      cursor: pointer;
       span {
         width: $menu-size;
         height: $menu-stroke;
@@ -259,7 +263,7 @@ $menu-animation-duration: .3s;
   flex-direction: column;
   padding-top: 70px;
   .item{
-    line-height: 40px;
+    line-height: 46px;
     padding-left: 20px;
     padding-right: 20px;
     a{
@@ -270,6 +274,15 @@ $menu-animation-duration: .3s;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      &::before{
+        position: absolute;
+        content: '';
+        border-bottom: 0.8px solid #eee;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
       i{
         font-size: 18px;
       }
@@ -282,7 +295,7 @@ $menu-animation-duration: .3s;
 }
 </style>
 <style>
-.self-drawer {
-  height: 48%!important;
+.drawer-wrapper {
+  height: auto!important;
 }
 </style>
