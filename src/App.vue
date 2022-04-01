@@ -10,6 +10,9 @@
     <!-- 尾部 -->
     <TheFooter></TheFooter>
 
+    <!-- 在线咨询 -->
+    <NewBridge></NewBridge>
+
     <el-backtop></el-backtop>
   </div>
 </template>
@@ -17,11 +20,13 @@
 <script>
 import TheHeader from '@/components/Header/Header'
 import TheFooter from '@/components/Footer/Footer'
+import NewBridge from '@/components/NewBridge/NewBridge'
 export default {
   name: 'App',
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    NewBridge
   }
 }
 </script>
