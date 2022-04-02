@@ -12,27 +12,13 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
+                    <a href="javascript:;">金鑫专栏</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">行业动态</a>
+                    <a href="javascript:;">行业动态</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">应用领域</a>
-                  </div>
-                </div>
-              </el-col>
-               <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-                <h4>
-                  <a href="javascript;">最新动态</a>
-                  <i class="el-icon-caret-right"></i>
-                </h4>
-                <div class="nav-list">
-                  <div class="nav-item">
-                    <a href="#">新闻资讯</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
+                    <a href="javascript:;">应用领域</a>
                   </div>
                 </div>
               </el-col>
@@ -43,16 +29,10 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">新闻资讯</a>
+                    <a href="javascript:;">新闻资讯</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="#">行业动态</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="#">应用领域</a>
+                    <a href="javascript:;">金鑫专栏</a>
                   </div>
                 </div>
               </el-col>
@@ -63,13 +43,33 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">新闻资讯</a>
+                    <a href="javascript:;">新闻资讯</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
+                    <a href="javascript:;">金鑫专栏</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">行业动态</a>
+                    <a href="javascript:;">行业动态</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">应用领域</a>
+                  </div>
+                </div>
+              </el-col>
+               <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                <h4>
+                  <a href="javascript;">最新动态</a>
+                  <i class="el-icon-caret-right"></i>
+                </h4>
+                <div class="nav-list">
+                  <div class="nav-item">
+                    <a href="javascript:;">新闻资讯</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">金鑫专栏</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">行业动态</a>
                   </div>
                 </div>
               </el-col>
@@ -83,7 +83,7 @@
                   <i class="el-icon-caret-right"></i>
                 </h4>
                 <div>
-                  <img width="146" src="./images/ewm.png" alt="">
+                  <img width="146" src="@/assets/images/jxgzhewm.png" alt="">
                 </div>
               </el-col>
               <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
@@ -93,7 +93,7 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">金鑫膜结构建筑设计院</a>
+                    <a href="javascript:;">金鑫膜结构建筑设计院</a>
                   </div>
                 </div>
               </el-col>
@@ -106,7 +106,7 @@
       <div class="container">
         <el-row>
           <el-col :xs="24" :sm="24" :md="24" :lg="10" :xl="10">
-            <span>Copyright  ©2012-2019 深圳金鑫膜结构建筑设计院 &nbsp; 版权所有</span>
+            <span>Copyright  ©2012-{{currentyear}} 深圳金鑫膜结构建筑设计院 &nbsp; 版权所有</span>
           </el-col>
           <el-col :xs="24" :sm="24" :md="24" :lg="14" :xl="14">
             <span><img src="./images/gongan.png" width="20" height="20" alt="">粤公网安备 44031102000362号 &nbsp; 粤ICP备19023340号-1</span>
@@ -118,7 +118,14 @@
 </template>
 <script>
 export default {
-  name: 'TheFooter'
+  name: 'TheFooter',
+  computed: {
+    currentyear () {
+      const myDate = new Date()
+      const tYear = myDate.getFullYear()
+      return tYear
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

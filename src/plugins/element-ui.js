@@ -16,7 +16,8 @@ import {
   Button,
   Card,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
+  Pagination
 } from 'element-ui'
 
 Vue.use(Carousel)
@@ -33,3 +34,4 @@ Vue.use(Button)
 Vue.use(Card)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
+Vue.use(Pagination)

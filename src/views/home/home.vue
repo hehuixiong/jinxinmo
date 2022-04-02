@@ -9,8 +9,9 @@
   </div>
 </template>
 <script>
+import TheApply from '@/components/TheApply/TheApply'
+
 import TheBanner from './components/TheBanner'
-import TheApply from './components/TheApply'
 import TheNotice from './components/TheNotice'
 import TheNews from './components/TheNews'
 export default {

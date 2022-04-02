@@ -8,7 +8,7 @@
       <el-row>
         <el-col :xs="24" :sm="12" :md="12" :lg="6" :xl="6" v-for="(item, index) in apply" :key="index">
           <div class="apply-image">
-            <img src="../images/case1.png" alt="">
+            <img :src="item.image" alt="">
             <div class="zhezhao">
               <div class="desc">{{item.desc}}</div>
             </div>
@@ -20,59 +20,75 @@
           </div>
         </el-col>
       </el-row>
-      <div class="more">
-        <router-link to="/">
+      <div class="more" v-if="showMore">
+        <router-link to="/apply">
           <span>
             MORE
             <i class="el-icon-arrow-right"></i>
           </span>
         </router-link>
       </div>
+      <div class="pages" v-else>
+        <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="30"
+          :pager-count="5"
+        >
+        </el-pagination>
+      </div>
     </div>
   </div>
 </template>
 <script>
 export default {
+  name: 'ApplyCom',
+  props: {
+    showMore: {
+      type: Boolean,
+      default: true
+    }
+  },
   data () {
     return {
       apply: [
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '环保设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '体育设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '商业设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '充气设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '交通设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '景观设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '仓储设施'
         },
         {
-          image: require('../images/case1.png'),
+          image: require('@/assets/images/case1.png'),
           desc: '金鑫膜-膜结构设计-顶尖膜结构设计-金鑫膜结构建筑设计院',
           con: '景观设施'
         }
@@ -83,7 +99,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 #Apply{
-  padding-bottom: 50px;
   .apply-title{
     padding-bottom: 16px;
     line-height: 1;
@@ -218,7 +233,7 @@ export default {
     }
     .more{
       text-align: center;
-      margin-bottom: 20px;
+      padding: 30px 0;
       a{
         display: inline-block;
         font-family: Times;

@@ -3,36 +3,15 @@
     <div class="header-bg hidden-sm-and-down">
       <div class="container">
         <el-row>
-          <el-col :xs="24" :sm="12" :md="4" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="4" :lg="6" :xl="8">
             <div class="header-logo">
               <img @click="$router.push('/')" src="@/assets/images/logo.png" alt="">
             </div>
           </el-col>
-          <el-col :xs="24" :sm="12" :md="20" :lg="16" :xl="16">
+          <el-col :xs="24" :sm="12" :md="20" :lg="18" :xl="16">
             <div class="header-nav">
-              <div class="item">
-                <router-link to="/">首页</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/apply">应用领域</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/serves">服务能力</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/solution">解决方案</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/introduce">膜材介绍</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/news">新闻中心</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/about">关于金鑫</router-link>
-              </div>
-              <div class="item">
-                <router-link to="/contact">联系我们</router-link>
+              <div class="item" :class="{'active': item.path === parentPath}" v-for="(item, index) in nav" :key="index">
+                <router-link :to="item.path">{{item.name}}</router-link>
               </div>
             </div>
           </el-col>
@@ -62,29 +41,8 @@
       :modal="false"
     >
       <div class="drawer-nav">
-        <div class="item">
-          <router-link to="/"> <span>首页</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/apply"> <span>应用领域</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/serves"> <span>服务能力</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/solution"> <span>解决方案</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/introduce"> <span>膜材介绍</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/news"> <span>新闻中心</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/about"> <span>关于金鑫</span> <i class="el-icon-arrow-right"></i></router-link>
-        </div>
-        <div class="item">
-          <router-link to="/contact"> <span>联系我们</span> <i class="el-icon-arrow-right"></i></router-link>
+        <div class="item" :class="{'active': item.path === parentPath}" v-for="(item, index) in nav" :key="index">
+          <router-link :to="item.path"> <span>{{item.name}}</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
       </div>
     </el-drawer>
@@ -96,12 +54,27 @@ export default {
   data () {
     return {
       fixed: false,
-      drawer: false
+      drawer: false,
+      nav: [
+        { name: '首页', path: '/' },
+        { name: '应用领域', path: '/apply' },
+        { name: '服务能力', path: '/serves' },
+        { name: '解决方案', path: '/solution' },
+        { name: '膜材介绍', path: '/introduce' },
+        { name: '新闻中心', path: '/news' },
+        { name: '关于金鑫', path: '/about' },
+        { name: '联系我们', path: '/contact' }
+      ]
     }
   },
   watch: {
     '$route' () {
       this.close()
+    }
+  },
+  computed: {
+    parentPath ({ $route }) {
+      return $route.meta.parentPath
     }
   },
   mounted () {
@@ -140,10 +113,10 @@ $menu-animation-duration: .3s;
     background: rgba(255, 255, 255, 0.8);
     overflow: hidden;
     height: 100px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
   }
   &.fixed .header-bg{
     background: #ffffff;
-    border-bottom: 1px solid #f1f1f1;
     height: 60px!important;
     .header-logo{
       width: 60px!important;
@@ -169,9 +142,10 @@ $menu-animation-duration: .3s;
   .header-nav{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     height: 100px;
     .item{
-      margin-right: 30px;
+      margin-right: 40px;
       a{
         color: #184369;
         display: inline-block;
@@ -180,14 +154,19 @@ $menu-animation-duration: .3s;
         &::before{
           position: absolute;
           content: '/';
-          right: -15px;
+          right: -20px;
           top: 0;
           color: #184369;
         }
       }
+      &:last-child{
+        margin-right: 0;
+      }
+      &.active a,
       .router-link-exact-active,
       a:hover{
         color: $--color-primary;
+        font-weight: bold;
       }
       &:last-child{
         a::before{
@@ -287,6 +266,7 @@ $menu-animation-duration: .3s;
         font-size: 18px;
       }
     }
+    &.active a,
     .router-link-exact-active,
     a:hover{
       color: $--color-primary;
