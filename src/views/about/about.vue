@@ -1,6 +1,6 @@
 <template>
   <div id="About">
-    <img src="@/assets/images/banner.png" alt="">
+    <img class="banner" src="@/assets/images/banner.png" alt="">
     <div class="container">
       <h1>关于金鑫</h1>
       <h1>...</h1>
@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 #About{
   overflow: hidden;
-  img{
+  .banner{
     width: 100%;
   }
 }
