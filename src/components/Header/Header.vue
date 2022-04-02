@@ -3,12 +3,12 @@
     <div class="header-bg hidden-sm-and-down">
       <div class="container">
         <el-row>
-          <el-col :xs="24" :sm="12" :md="4" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="4" :lg="6" :xl="8">
             <div class="header-logo">
               <img @click="$router.push('/')" src="@/assets/images/logo.png" alt="">
             </div>
           </el-col>
-          <el-col :xs="24" :sm="12" :md="20" :lg="16" :xl="16">
+          <el-col :xs="24" :sm="12" :md="20" :lg="18" :xl="16">
             <div class="header-nav">
               <div class="item" :class="{'active': item.path === parentPath}" v-for="(item, index) in nav" :key="index">
                 <router-link :to="item.path">{{item.name}}</router-link>
@@ -113,10 +113,10 @@ $menu-animation-duration: .3s;
     background: rgba(255, 255, 255, 0.8);
     overflow: hidden;
     height: 100px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
   }
   &.fixed .header-bg{
     background: #ffffff;
-    border-bottom: 1px solid #f1f1f1;
     height: 60px!important;
     .header-logo{
       width: 60px!important;
@@ -142,9 +142,10 @@ $menu-animation-duration: .3s;
   .header-nav{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     height: 100px;
     .item{
-      margin-right: 30px;
+      margin-right: 40px;
       a{
         color: #184369;
         display: inline-block;
@@ -153,10 +154,13 @@ $menu-animation-duration: .3s;
         &::before{
           position: absolute;
           content: '/';
-          right: -15px;
+          right: -20px;
           top: 0;
           color: #184369;
         }
+      }
+      &:last-child{
+        margin-right: 0;
       }
       &.active a,
       .router-link-exact-active,

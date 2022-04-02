@@ -87,9 +87,6 @@ export default {
         }
       })
     },
-    resetForm (formName) {
-      this.$refs[formName].resetFields()
-    },
     onShowNodeboard () {
       this.showNodeboard = true
       this.showForm = true
@@ -218,6 +215,7 @@ export default {
           font-size: 20px;
           margin-left: 4px;
           text-shadow:rgb(0, 0, 0) 2px 4px 5px;
+          letter-spacing: 2px;
           i{
             border-radius: 50%;
             width: 26px;

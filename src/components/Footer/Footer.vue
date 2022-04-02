@@ -12,27 +12,13 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
+                    <a href="javascript:;">金鑫专栏</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">行业动态</a>
+                    <a href="javascript:;">行业动态</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">应用领域</a>
-                  </div>
-                </div>
-              </el-col>
-               <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-                <h4>
-                  <a href="javascript;">最新动态</a>
-                  <i class="el-icon-caret-right"></i>
-                </h4>
-                <div class="nav-list">
-                  <div class="nav-item">
-                    <a href="#">新闻资讯</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
+                    <a href="javascript:;">应用领域</a>
                   </div>
                 </div>
               </el-col>
@@ -43,16 +29,10 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">新闻资讯</a>
+                    <a href="javascript:;">新闻资讯</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="#">行业动态</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="#">应用领域</a>
+                    <a href="javascript:;">金鑫专栏</a>
                   </div>
                 </div>
               </el-col>
@@ -63,13 +43,33 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">新闻资讯</a>
+                    <a href="javascript:;">新闻资讯</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">金鑫专栏</a>
+                    <a href="javascript:;">金鑫专栏</a>
                   </div>
                   <div class="nav-item">
-                    <a href="#">行业动态</a>
+                    <a href="javascript:;">行业动态</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">应用领域</a>
+                  </div>
+                </div>
+              </el-col>
+               <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                <h4>
+                  <a href="javascript;">最新动态</a>
+                  <i class="el-icon-caret-right"></i>
+                </h4>
+                <div class="nav-list">
+                  <div class="nav-item">
+                    <a href="javascript:;">新闻资讯</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">金鑫专栏</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">行业动态</a>
                   </div>
                 </div>
               </el-col>
@@ -83,7 +83,7 @@
                   <i class="el-icon-caret-right"></i>
                 </h4>
                 <div>
-                  <img width="146" src="./images/ewm.png" alt="">
+                  <img width="146" src="@/assets/images/jxgzhewm.png" alt="">
                 </div>
               </el-col>
               <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
@@ -93,7 +93,7 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="#">金鑫膜结构建筑设计院</a>
+                    <a href="javascript:;">金鑫膜结构建筑设计院</a>
                   </div>
                 </div>
               </el-col>

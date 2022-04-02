@@ -52,7 +52,8 @@ const routes = [
     name: 'news',
     component: () => import(/* webpackChunkName: "news" */ '../views/news/news.vue'),
     meta: {
-      title: '新闻中心'
+      title: '新闻中心',
+      parentPath: '/news'
     }
   },
   /** 新闻详情 */
@@ -94,5 +95,11 @@ const router = new VueRouter({
     return { x: 0, y: 0 }
   }
 })
+
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push (location, onResolve, onReject) {
+  if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
+  return originalPush.call(this, location).catch(err => err)
+}
 
 export default router

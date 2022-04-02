@@ -4,23 +4,14 @@
     <div class="container">
       <div class="news-tabs">
         <ul>
-          <li>
-            <a href="#">新闻咨询</a>
-          </li>
-          <li>
-            <a href="#">金鑫专栏</a>
-          </li>
-          <li>
-            <a href="#">行业动态</a>
-          </li>
-          <li>
-            <a href="#">应用领域</a>
+          <li :class="{active: index === active}" v-for="(item, index) in tabs" :key="index" @click="toggle(index)">
+            <a href="javascript:;">{{item.title}}</a>
           </li>
         </ul>
       </div>
       <div class="news-content">
         <el-row>
-          <el-col :xs="24" :sm="15" :md="16" :lg="18" :xl="18">
+          <el-col :xs="24" :sm="15" :md="16" :lg="18" :xl="18" style="float: right;">
             <div class="nc-news-list">
               <el-card class="box-card" v-for="item in 20" :key="item">
                 <el-row>
@@ -55,7 +46,7 @@
               </el-pagination>
             </div>
           </el-col>
-          <el-col :xs="24" :sm="9" :md="8" :lg="6" :xl="6">
+          <el-col :xs="24" :sm="9" :md="8" :lg="6" :xl="6" style="float: left;">
             <div class="nc-news-recommend">
               <el-card class="box-card">
                 <div class="nc-nr-title">为你推荐</div>
@@ -74,7 +65,30 @@
 </template>
 <script>
 export default {
-  name: 'NewsPage'
+  name: 'NewsPage',
+  data () {
+    return {
+      active: 0,
+      tabs: [
+        { title: '新闻资讯' },
+        { title: '金鑫专栏' },
+        { title: '行业动态' },
+        { title: '应用领域' }
+      ]
+    }
+  },
+  mounted () {
+    this.active = +this.$route.query.active || 0
+  },
+  methods: {
+    toggle (active) {
+      this.active = active
+      this.$router.push({
+        path: '/news',
+        query: { active }
+      })
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -90,6 +104,17 @@ export default {
       display: flex;
       li{
         margin: 0 10px;
+        a{
+          font-size: 16px;
+        }
+        &.active a{
+          color: $--color-primary;
+          font-weight: bold;
+          font-size: 17px;
+        }
+        &:hover a{
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -141,7 +166,7 @@ export default {
       }
     }
     .nc-news-recommend{
-      margin: 0 15px;
+      margin: 0 15px 30px;
       .box-card{
         .nc-nr-title{
           font-size: 18px;
