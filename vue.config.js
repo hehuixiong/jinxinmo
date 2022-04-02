@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+const defaultSettings = require('./config/env.js')
 const PORT = 3000
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -7,7 +8,7 @@ module.exports = defineConfig({
   },
   chainWebpack: config => {
     config.plugin('html').tap((args) => {
-      args[0].title = '膜结构设计公司-膜结构设计-张拉膜结构设计-深圳市金鑫空间膜结构建筑设计院'
+      args[0].title = defaultSettings.title
       return args
     })
   },

@@ -153,7 +153,7 @@ export default {
               transform: translateX(100%);
               line-height: 40px;
               border-left: 1px solid #4d4d4d;
-              color: #8f8f8f;
+              color: #4d4d4d;
               padding: 0 20px;
               transition: .35s ease-out;
             }

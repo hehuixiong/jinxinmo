@@ -9,7 +9,7 @@
             <!-- 控件将定位到地图的右上角 -->
             <!-- <bm-scale anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-scale> -->
             <!-- 平移缩放组件 -->
-            <!-- <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation> -->
+            <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
             <!-- 缩略图 -->
             <!-- <bm-overview-map anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :isOpen="true"></bm-overview-map> -->
             <!-- 定位 -->
@@ -22,8 +22,6 @@
         </el-card>
       </el-col>
     </el-row>
-    <div class="container">
-    </div>
   </div>
 </template>
 <script>
@@ -48,7 +46,7 @@ export default {
           <div>
             <div style="font-weight: 900;color: red;font-size: 15px;">深圳市金鑫空间膜结构建筑设计院</div>
             <div>地址：深圳市光明区马田街道松柏路<br />5059号启航大厦13楼13C、13D</div>
-            <div>邮箱：2359025166@qq。com</div>
+            <div>邮箱：2359025166@qq.com</div>
             <div>电话：18820181513</div>
             <div>座机：0755-32916782</div>
           </div>
@@ -87,9 +85,6 @@ export default {
 <style lang="scss" scoped>
 #Contact{
   overflow: hidden;
-  .container{
-    margin: 20px 0;
-  }
   img{
     width: 100%;
   }

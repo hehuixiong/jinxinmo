@@ -106,7 +106,7 @@
       <div class="container">
         <el-row>
           <el-col :xs="24" :sm="24" :md="24" :lg="10" :xl="10">
-            <span>Copyright  ©2012-2019 深圳金鑫膜结构建筑设计院 &nbsp; 版权所有</span>
+            <span>Copyright  ©2012-{{currentyear}} 深圳金鑫膜结构建筑设计院 &nbsp; 版权所有</span>
           </el-col>
           <el-col :xs="24" :sm="24" :md="24" :lg="14" :xl="14">
             <span><img src="./images/gongan.png" width="20" height="20" alt="">粤公网安备 44031102000362号 &nbsp; 粤ICP备19023340号-1</span>
@@ -118,7 +118,14 @@
 </template>
 <script>
 export default {
-  name: 'TheFooter'
+  name: 'TheFooter',
+  computed: {
+    currentyear () {
+      const myDate = new Date()
+      const tYear = myDate.getFullYear()
+      return tYear
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

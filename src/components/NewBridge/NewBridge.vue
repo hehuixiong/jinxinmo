@@ -1,5 +1,5 @@
 <template>
-  <div id="NewBridge">
+  <div id="NewBridge" class="noselect">
     <div class="nb-nodeboard-base" ref="nbNodeboardBase" v-if="showNodeboard">
       <div class="nb-nodeboard-contain-base">
         <div class="nb-nodeboard-top" :class="{showForm}">
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="nb-icon-wrap noselect" @click="onShowNodeboard">
+    <div class="nb-icon-wrap" @click="onShowNodeboard">
       <div class="nb-icon-inner-wrap">
         <div class="nb-icon-bridge-base">
           <span class="ch">在线咨询 <i class="el-icon-s-promotion"></i></span>
@@ -114,7 +114,7 @@ export default {
 #NewBridge{
   .nb-nodeboard-form{
     .el-form-item{
-      margin-bottom: 10px!important;
+      margin-bottom: 0!important;
       &:last-child{
         margin-bottom: 0!important;
         display: flex;
@@ -122,6 +122,9 @@ export default {
       }
       .el-textarea{
         margin-bottom: 4px;
+      }
+      &.is-error{
+        margin-bottom: 14px!important;
       }
     }
     .el-form-item__error{
@@ -217,8 +220,8 @@ export default {
           text-shadow:rgb(0, 0, 0) 2px 4px 5px;
           i{
             border-radius: 50%;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             display: inline-flex;
             background: #fff;
             color: $--color-primary;
@@ -226,6 +229,7 @@ export default {
             align-items: center;
             transform: translate(-4px, -3px);
             text-shadow: none;
+            font-size: 18px;
           }
         }
         .en{
