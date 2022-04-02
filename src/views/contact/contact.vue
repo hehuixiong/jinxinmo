@@ -242,7 +242,7 @@ export default {
     .co-content{
       margin-top: 25px;
       p{
-        color: #000000;
+        color: #333333;
         font-size: 18px;
         font-weight: 500;
         margin-top: 18px;

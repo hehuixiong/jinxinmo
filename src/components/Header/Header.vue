@@ -135,8 +135,8 @@ $menu-animation-duration: .3s;
     cursor: pointer;
     transition: 0.3s ease-out;
     img{
-      width: calc(100% - 10px);
-      height: calc(100% - 10px);
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
     }
   }
   .header-nav{
@@ -195,8 +195,8 @@ $menu-animation-duration: .3s;
       width: 100%;
     }
     img{
-      width: 50px;
-      height: 50px;
+      width: 62px;
+      height: 62px;
     }
     .logo{
       cursor: pointer;

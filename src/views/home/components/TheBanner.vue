@@ -58,7 +58,7 @@ export default {
   .banner-box{
     width: 400px;
     height: 270px;
-    background: rgba(236, 167, 59, 0.8);
+    background: rgba($--color-primary, 0.8);
     color: #ffffff;
     display: inline-flex;
     flex-direction: column;
@@ -87,7 +87,7 @@ export default {
     z-index: 99;
   }
   .el-carousel__arrow{
-    background: rgba(236, 167, 59, 0.6);
+    background: rgba($--color-primary, 0.6);
     i{
       font-weight: bold;
       font-size: 16px;

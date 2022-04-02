@@ -93,11 +93,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 #News{
+  overflow: hidden;
   .banner{
     width: 100%;
   }
   .news-tabs{
-    padding: 20px 0;
+    padding: 22px 0;
     display: flex;
     justify-content: center;
     ul{
