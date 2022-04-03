@@ -9,7 +9,7 @@ import '@/plugins/nprogress.js'
 import '@/assets/styles/index.scss'
 
 Vue.config.productionTip = false
-// 测试
+// 测试1
 new Vue({
   router,
   store,
