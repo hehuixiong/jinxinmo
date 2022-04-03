@@ -157,6 +157,7 @@ $menu-animation-duration: .3s;
           right: -20px;
           top: 0;
           color: #184369;
+          font-weight: 500;
         }
       }
       &:last-child{

@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #Breadcrumb{
-  padding: 24px 0;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   .position{

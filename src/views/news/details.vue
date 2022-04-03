@@ -44,7 +44,7 @@ export default {
     width: 100%;
   }
   .news-wrapper{
-    padding: 30px 50px 50px;
+    padding: 0 0 50px;
     .title{
       border-bottom: 1px solid #eeeeee;
       padding-bottom: 20px;
@@ -65,6 +65,10 @@ export default {
       display: flex;
       justify-content: space-between;
       margin-top: 30px;
+      .el-button{
+        max-width: 50%;
+        @include ell();
+      }
     }
   }
 }

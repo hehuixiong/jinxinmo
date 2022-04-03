@@ -6,7 +6,7 @@
     </div>
     <div class="apply-content">
       <el-row>
-        <el-col :xs="24" :sm="12" :md="12" :lg="6" :xl="6" v-for="(item, index) in apply" :key="index">
+        <el-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" v-for="(item, index) in apply" :key="index">
           <div class="apply-image">
             <img :src="item.image" alt="">
             <div class="zhezhao">
@@ -14,9 +14,9 @@
             </div>
           </div>
           <div class="apply-con">
-            <em><i class="el-icon-arrow-right"></i></em>
+            <em class="hidden-xs-only"><i class="el-icon-arrow-right"></i></em>
             <b><span>{{item.con}}</span></b>
-            <p>&nbsp;</p>
+            <p class="hidden-xs-only">&nbsp;</p>
           </div>
         </el-col>
       </el-row>
@@ -124,7 +124,7 @@ export default {
       margin: 0 -10px;
       .el-col{
         cursor: pointer;
-        padding: 0 10px 20px;
+        padding: 0 10px 15px;
         .apply-image{
           position: relative;
           overflow: hidden;
@@ -167,10 +167,11 @@ export default {
               font-size: 24px;
               transform: translateX(100%);
               line-height: 40px;
-              border-left: 1px solid #4d4d4d;
+              border-left: 2px solid #4d4d4d;
               color: #4d4d4d;
               padding: 0 20px;
               transition: .35s ease-out;
+              font-weight: bold;
             }
           }
           b{
@@ -190,15 +191,13 @@ export default {
           p{
             font-size: 14px;
             color: #8f8f8f;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            @include ell();
             margin: 0;
             transition: .3s;
           }
           &::before{
             content: '';
-            border-bottom: 1px solid #4d4d4d;
+            border-bottom: 2px solid #4d4d4d;
             width: 0%;
             position: absolute;
             bottom: 1px;

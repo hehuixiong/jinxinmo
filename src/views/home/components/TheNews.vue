@@ -14,19 +14,19 @@
               </div>
               <div class="news-list">
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
               </div>
@@ -43,19 +43,19 @@
             </div>
             <div class="news-list">
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
               </div>
@@ -77,19 +77,19 @@
               </div>
               <div class="news-list">
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
                 <div class="news-item">
-                  <div class="desc">环保局：14省市将在今年底前完成...</div>
+                  <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                   <div class="time">03-02</div>
                 </div>
               </div>
@@ -106,19 +106,19 @@
             </div>
             <div class="news-list">
               <div class="news-item">
-                <div class="desc">环保局：14省市将在今年底前完成...</div>
+                <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                 <div class="time">03-02</div>
               </div>
               <div class="news-item">
-                <div class="desc">环保局：14省市将在今年底前完成...</div>
+                <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                 <div class="time">03-02</div>
               </div>
               <div class="news-item">
-                <div class="desc">环保局：14省市将在今年底前完成...</div>
+                <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                 <div class="time">03-02</div>
               </div>
               <div class="news-item">
-                <div class="desc">环保局：14省市将在今年底前完成...</div>
+                <div class="desc">环保局：14省市将在今年底前完成环保局省市将在今年底前完成今年底前完成</div>
                 <div class="time">03-02</div>
               </div>
             </div>
@@ -211,10 +211,9 @@ export default {
         line-height: 46px;
         .desc{
           cursor: pointer;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          @include ell();
           width: 100%;
+          padding-right: 10px;
           &:hover{
             color: $--color-primary;
           }
