@@ -35,4 +35,9 @@ export default {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
+@media screen and (max-width:576px) {
+  .el-backtop{
+    right: 20px!important;
+  }
+}
 </style>

@@ -56,9 +56,7 @@ export default {
       float: left;
       padding-left: 15px;
       font-size: 15px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      @include ell();
       line-height: 38px;
     }
     .notice-swiper {

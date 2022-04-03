@@ -71,14 +71,7 @@
         </el-col>
         <el-col :xs="24" :sm="9" :md="8" :lg="6" :xl="6" style="float: left;">
           <div class="introduce-tabs">
-            <div class="tabs-title">
-              <span class="ch">膜材介绍</span> / <span class="en">introduce</span>
-            </div>
-            <ul>
-              <li v-for="(tab, index) in tabs" :key="index" :class="{active: active === index}" @click="toggle(index)">
-                <a href="javascript:;">{{tab}}</a>
-              </li>
-            </ul>
+            <Tabs title="膜材介绍" desc="introduce" :tabs="tabs" @toggle="toggle" :active.sync="active"></Tabs>
           </div>
         </el-col>
       </el-row>
@@ -87,20 +80,26 @@
 </template>
 <script>
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
+import Tabs from '@/components/Tabs/Tabs'
 export default {
   name: 'IntroducePage',
   components: {
-    Breadcrumb
+    Breadcrumb,
+    Tabs
   },
   data () {
     return {
-      tabs: ['ETFE', 'PTFE', 'PVC', '膜材对比表'],
+      tabs: [
+        { title: 'ETFE' },
+        { title: 'PTFE' },
+        { title: 'PVC' },
+        { title: '膜材对比表' }
+      ],
       active: 0
     }
   },
   methods: {
-    toggle (active) {
-      this.active = active
+    toggle () {
       document.getElementById('Breadcrumb').scrollIntoView()
     }
   }
@@ -117,41 +116,6 @@ export default {
   }
   .introduce-tabs{
     margin: 0 15px 15px;
-    .tabs-title{
-      background: $--color-primary;
-      height: 46px;
-      line-height: 46px;
-      padding: 0 20px;
-      color: #ffffff;
-      .ch{
-        font-weight: bold;
-        font-size: 20px;
-      }
-      .en{
-        font-size: 16px;
-      }
-    }
-    ul{
-      display: flex;
-      flex-direction: column;
-      li{
-        line-height: 44px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: -webkit-linear-gradient(top,#ffffff 0%,#f5f5f5 72%,#edecec 100%);
-        cursor: pointer;
-        padding: 0 20px;
-        a{
-          font-size: 15px;
-          color: #000000;
-        }
-        &.active a,
-        &:hover a{
-          color: $--color-primary;
-        }
-      }
-    }
   }
   .introduce-wrapper{
     margin: 0 15px;

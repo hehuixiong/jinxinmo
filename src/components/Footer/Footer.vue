@@ -12,37 +12,6 @@
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="javascript:;">金鑫专栏</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="javascript:;">行业动态</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="javascript:;">应用领域</a>
-                  </div>
-                </div>
-              </el-col>
-               <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-                <h4>
-                  <a href="javascript;">最新动态</a>
-                  <i class="el-icon-caret-right"></i>
-                </h4>
-                <div class="nav-list">
-                  <div class="nav-item">
-                    <a href="javascript:;">新闻资讯</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="javascript:;">金鑫专栏</a>
-                  </div>
-                </div>
-              </el-col>
-               <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-                <h4>
-                  <a href="javascript;">最新动态</a>
-                  <i class="el-icon-caret-right"></i>
-                </h4>
-                <div class="nav-list">
-                  <div class="nav-item">
                     <a href="javascript:;">新闻资讯</a>
                   </div>
                   <div class="nav-item">
@@ -58,18 +27,41 @@
               </el-col>
                <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
                 <h4>
-                  <a href="javascript;">最新动态</a>
+                  <a href="javascript;">膜材介绍</a>
                   <i class="el-icon-caret-right"></i>
                 </h4>
                 <div class="nav-list">
                   <div class="nav-item">
-                    <a href="javascript:;">新闻资讯</a>
+                    <a href="javascript:;">ETFE</a>
                   </div>
                   <div class="nav-item">
-                    <a href="javascript:;">金鑫专栏</a>
+                    <a href="javascript:;">PTFE</a>
                   </div>
                   <div class="nav-item">
-                    <a href="javascript:;">行业动态</a>
+                    <a href="javascript:;">PVC</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="javascript:;">膜材对比表</a>
+                  </div>
+                </div>
+              </el-col>
+               <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                <h4>
+                  <a href="javascript;">联系我们</a>
+                  <i class="el-icon-caret-right"></i>
+                </h4>
+                <div class="nav-list">
+                  <div class="nav-item">
+                    <span>地址：深圳市光明区马田街道松柏路5059号启航大厦13楼13C、13D</span>
+                  </div>
+                  <div class="nav-item">
+                    <span>电话：188 2018 1513（王经理）</span>
+                  </div>
+                  <div class="nav-item">
+                    <span>座机：0755-3291 6782</span>
+                  </div>
+                  <div class="nav-item">
+                    <span>座机：0755-2309 6336</span>
                   </div>
                 </div>
               </el-col>
@@ -91,7 +83,7 @@
                   <a href="javascript;">友情链接</a>
                   <i class="el-icon-caret-right"></i>
                 </h4>
-                <div class="nav-list">
+                <div class="nav-list" style="min-height: auto;">
                   <div class="nav-item">
                     <a href="javascript:;">金鑫膜结构建筑设计院</a>
                   </div>
@@ -134,6 +126,7 @@ export default {
     background-image: url('./images/footer.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 10px 0px;
     height: 240x;
     h4{
@@ -155,10 +148,12 @@ export default {
     .nav-list{
       min-height: 150px;
       .nav-item{
-        line-height: 38px;
+        padding: 8px 20px 8px 0;
+        span,
         a{
           color: #ffffff;
         }
+        &:hover span,
         &:hover a{
           color: $--color-primary;
         }

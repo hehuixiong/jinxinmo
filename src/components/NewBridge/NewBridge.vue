@@ -42,9 +42,14 @@
     <div class="nb-icon-wrap" @click="onShowNodeboard">
       <div class="nb-icon-inner-wrap">
         <div class="nb-icon-bridge-base">
-          <span class="ch">在线咨询 <i class="el-icon-s-promotion"></i></span>
+          <span class="ch">在线咨询 <i class="iconfont icon-zaixianzixun"></i></span>
           <span class="en">ONLINE &nbsp;CONSULTATION</span>
         </div>
+      </div>
+    </div>
+    <div class="nb-icon-wrap-mobile" @click="onShowNodeboard">
+      <div class="nb-icon-inner-wrap">
+        <span class="iconfont icon-zaixianzixun"></span>
       </div>
     </div>
   </div>
@@ -185,6 +190,28 @@ export default {
       }
     }
   }
+  .nb-icon-wrap-mobile{
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    border-radius: 50%;
+    z-index: 99999;
+    width: 40px;
+    height: 40px;
+    display: none;
+    .nb-icon-inner-wrap{
+      background-color: $--color-primary;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .iconfont{
+        margin: auto;
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+  }
   .nb-icon-wrap{
     position: fixed;
     right: 2px;
@@ -195,6 +222,7 @@ export default {
     border-radius: 5px;
     z-index: 99999;
     width: 144px;
+    display: block;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     .nb-icon-inner-wrap{
       position: relative;
@@ -225,9 +253,12 @@ export default {
             color: $--color-primary;
             justify-content: center;
             align-items: center;
-            transform: translate(-4px, -3px);
+            transform: translate(-6px, -3px);
             text-shadow: none;
             font-size: 18px;
+            &::before{
+              margin-left: 2px;
+            }
           }
         }
         .en{
@@ -245,9 +276,11 @@ export default {
   }
 }
 @media screen and (max-width:576px) {
+  .nb-icon-wrap-mobile{
+    display: block!important;
+  }
   .nb-icon-wrap{
-    top: auto!important;
-    bottom: 80px!important;
+    display: none!important;
   }
 }
 </style>

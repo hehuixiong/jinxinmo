@@ -94,6 +94,12 @@ export default {
     }
   }
 }
+@media (min-width: 280px) {
+  .el-carousel__container {
+    height: 150px!important;
+  }
+}
+
 @media (min-width: 375px) {
   .el-carousel__container {
     height: 150px!important;
