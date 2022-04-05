@@ -6,9 +6,12 @@
       desc="server"
       :menu="menu"
       @menu-click="handlerClick"
+      :activeMenu.sync="activeMenu"
     >
       <template slot="content">
-        <div class="solution-container" style="height: 1000px;">服务能力</div>
+        <div class="server-container">
+          <p>开发中...</p>
+        </div>
       </template>
     </MenuLayout>
   </div>
@@ -34,12 +37,7 @@ export default {
             { label: '风洞模拟' }
           ]
         },
-        {
-          label: '制作加工',
-          sub: [
-            { label: '测试工程' }
-          ]
-        },
+        { label: '制作加工' },
         { label: '施工安装' },
         { label: '服务流程' }
       ],
@@ -47,13 +45,13 @@ export default {
     }
   },
   methods: {
-    handlerClick (activeMenu) {
-      this.activeMenu = activeMenu
+    handlerClick () {
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 #Serves{
+  .server-container{}
 }
 </style>

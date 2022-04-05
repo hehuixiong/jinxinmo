@@ -2,7 +2,7 @@
   <div id="Apply">
     <img class="banner-image" src="@/assets/images/banner.png" alt="">
     <div class="container">
-      <TheApply :showMore="false"></TheApply>
+      <TheApply hideMore></TheApply>
     </div>
   </div>
 </template>

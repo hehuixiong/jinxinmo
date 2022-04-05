@@ -22,7 +22,7 @@
               <li
                 v-for="(item, index) in menu"
                 :key="index" :class="{'is-active': menuIndex === index}"
-                @click="onClick(item.sub, index, 0, 'mainMenu')"
+                @click="menuClick(item.sub, index, 0, 'mainMenu')"
               >
                 <div class="menu-layout-item">
                   <a href="javascript:;">{{item.label}}</a>
@@ -37,7 +37,7 @@
                       :class="{'is-active': subIndex === sIndex}"
                       v-for="(sub, sIndex) in tempMenu[index].sub"
                       :key="sIndex"
-                      @click.stop="onClick(null, index, sIndex)"
+                      @click.stop="menuClick(null, index, sIndex)"
                     >
                       <span>{{sub.label}}</span>
                     </li>
@@ -45,6 +45,10 @@
                 </template>
               </li>
             </ul>
+          </div>
+          <div class="menu-layout-hotline" v-if="false">
+            <p>全国免费热线</p>
+            <p>0755-32916782</p>
           </div>
         </el-col>
       </el-row>
@@ -97,7 +101,7 @@ export default {
     }
   },
   methods: {
-    onClick (sub, index, sunIndex, type) {
+    menuClick (sub, index, sunIndex, type) {
       this.menuIndex = index
       this.subIndex = sunIndex
       const isSub = sub && sub.length > 0
@@ -110,8 +114,9 @@ export default {
         }
       }
       document.getElementById('Breadcrumb').scrollIntoView()
-      const currentMenuRender = isSub ? (`${++index}-${++sunIndex}`).toString() : (`${++index}-0`).toString()
+      const currentMenuRender = !isSub && type === 'mainMenu' ? (`${++index}-0`).toString() : (`${++index}-${++sunIndex}`).toString()
       this.$emit('menu-click', currentMenuRender)
+      this.$emit('update:activeMenu', currentMenuRender)
       console.log('当前菜单：', currentMenuRender)
     }
   }
@@ -121,6 +126,20 @@ export default {
 #MenuLayout{
   .el-row{
     margin: 0 -15px;
+  }
+  .menu-layout-hotline{
+    margin: 0 15px 15px;
+    background: $--color-primary;
+    padding: 20px;
+    p{
+      color: #fff;
+      &:nth-child(1){
+        font-size: 18px;
+      }
+      &:nth-child(2){
+        font-size: 24px;
+      }
+    }
   }
   .menu-layout-vertical{
     margin: 0 15px 15px;
@@ -169,6 +188,7 @@ export default {
           padding: 0 30px;
           border-bottom: 1px solid #ededed;
           cursor: pointer;
+          color: #3d3c3c;
           &.is-active,
           &:hover{
             color: $--color-primary;

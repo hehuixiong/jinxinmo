@@ -7,6 +7,7 @@
       desc="news"
       :menu="menu"
       @menu-click="handlerClick"
+      :activeMenu.sync="activeMenu"
     >
       <template slot="content">
         <div class="news-container">
@@ -67,8 +68,7 @@ export default {
     }
   },
   methods: {
-    handlerClick (activeMenu) {
-      this.activeMenu = activeMenu
+    handlerClick () {
     }
   }
 }

@@ -6,6 +6,7 @@
       desc="introduce"
       :menu="menu"
       @menu-click="handlerClick"
+      :activeMenu.sync="activeMenu"
     >
       <template slot="content">
         <div class="introduce-container">
@@ -85,8 +86,7 @@ export default {
     }
   },
   methods: {
-    handlerClick (activeMenu) {
-      this.activeMenu = activeMenu
+    handlerClick () {
     }
   }
 }

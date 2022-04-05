@@ -8,7 +8,9 @@
       @menu-click="handlerClick"
     >
       <template slot="content">
-        <div class="solution-container">解决方案</div>
+        <div class="solution-container">
+          <p>开发中...</p>
+        </div>
       </template>
     </MenuLayout>
   </div>
@@ -48,7 +50,6 @@ export default {
 <style lang="scss" scoped>
 #Solution{
   .solution-container{
-    padding-bottom: 30px;
   }
 }
 </style>

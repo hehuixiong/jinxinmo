@@ -6,6 +6,7 @@
       desc="about"
       :menu="menu"
       @menu-click="handlerClick"
+      :activeMenu.sync="activeMenu"
     >
       <template slot="content">
         <div class="about-container" v-if="activeMenu === '1-0'">
@@ -57,8 +58,7 @@ export default {
     }
   },
   methods: {
-    handlerClick (activeMenu) {
-      this.activeMenu = activeMenu
+    handlerClick () {
     }
   }
 }
