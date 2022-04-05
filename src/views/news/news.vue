@@ -1,12 +1,15 @@
 <template>
   <div id="News">
-    <img class="banner" src="@/assets/images/banner.png" alt="">
-    <div class="container">
-      <div id="Breadcrumb">
-        <Breadcrumb></Breadcrumb>
-      </div>
-      <el-row class="news-content">
-        <el-col :xs="24" :sm="15" :md="16" :lg="18" :xl="18" style="float: right;">
+    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <MenuLayout
+      :hide-vessel-title="false"
+      title="新闻中心"
+      desc="news"
+      :menu="menu"
+      @menu-click="handlerClick"
+    >
+      <template slot="content">
+        <div class="news-container">
           <div class="nc-news-list">
             <el-card class="box-card" v-for="item in 20" :key="item">
               <el-row>
@@ -40,96 +43,78 @@
             >
             </el-pagination>
           </div>
-        </el-col>
-        <el-col :xs="24" :sm="9" :md="8" :lg="6" :xl="6" style="float: left;">
-          <div class="nc-news-tabs">
-            <Tabs title="新闻中心" desc="news" :tabs="tabs" @toggle="toggle" :active.sync="active"></Tabs>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
+        </div>
+      </template>
+    </MenuLayout>
   </div>
 </template>
 <script>
-import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
-import Tabs from '@/components/Tabs/Tabs'
+import MenuLayout from '@/components/MenuLayout/MenuLayout'
 export default {
   name: 'NewsPage',
   components: {
-    Breadcrumb,
-    Tabs
+    MenuLayout
   },
   data () {
     return {
-      active: 0,
-      tabs: [
-        { title: '新闻资讯' },
-        { title: '金鑫专栏' },
-        { title: '行业动态' },
-        { title: '应用领域' }
+      activeMenu: '1-1',
+      menu: [
+        { label: '新闻资讯' },
+        { label: '金鑫专栏' },
+        { label: '行业动态' },
+        { label: '应用领域' }
       ]
     }
   },
   methods: {
-    toggle () {
-      document.getElementById('Breadcrumb').scrollIntoView()
+    handlerClick (activeMenu) {
+      this.activeMenu = activeMenu
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 #News{
-  overflow: hidden;
-  .banner{
-    width: 100%;
-  }
-  .news-content{
-    margin: 0 -15px;
-    .nc-news-list{
-      margin: 0 15px;
-      .box-card{
-        margin-bottom: 20px;
-        &:last-child{
-          margin-bottom: 0;
-        }
-        .nc-nl-image{
-          margin-bottom: 10px;
-          cursor: pointer;
-          img{
-            max-width: 150px;
-            width: 100%;
-            margin: 0 auto;
-          }
-        }
-        .nc-nl-container{
-          padding-left: 20px;
-          .nc-nl-container__title{
-            @include ell();
-            a{
-              font-size: 22px;
-              color: #333333;
-              &:hover{
-                text-decoration: underline;
-                color: $--color-primary;
-              }
-            }
-          }
-          .nc-nl-container__desc{
-            font-size: 16px;
-            color: #666666;
-            margin-top: 6px;
-            @include ell(5);
-            margin-bottom: 4px;
-          }
-          .nc-nl-container__time{
-            font-size: 16px;
-            color: #a3afb7;
-          }
+  .nc-news-list{
+    .box-card{
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .nc-nl-image{
+        margin-bottom: 10px;
+        cursor: pointer;
+        img{
+          max-width: 150px;
+          width: 100%;
+          margin: 0 auto;
         }
       }
-    }
-    .nc-news-tabs{
-      margin: 0 15px 15px;
+      .nc-nl-container{
+        padding-left: 20px;
+        .nc-nl-container__title{
+          @include ell();
+          a{
+            font-size: 22px;
+            color: #333333;
+            &:hover{
+              text-decoration: underline;
+              color: $--color-primary;
+            }
+          }
+        }
+        .nc-nl-container__desc{
+          font-size: 16px;
+          color: #666666;
+          margin-top: 6px;
+          @include ell(5);
+          margin-bottom: 4px;
+        }
+        .nc-nl-container__time{
+          font-size: 16px;
+          color: #a3afb7;
+        }
+      }
     }
   }
   @media screen and (max-width:767px) {

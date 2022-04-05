@@ -1,6 +1,6 @@
 <template>
   <div id="Apply">
-    <img class="banner" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png" alt="">
     <div class="container">
       <TheApply :showMore="false"></TheApply>
     </div>
@@ -17,9 +17,5 @@ export default {
 </script>
 <style lang="scss" scoped>
 #Apply{
-  overflow: hidden;
-  .banner{
-    width: 100%;
-  }
 }
 </style>

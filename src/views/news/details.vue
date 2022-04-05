@@ -1,9 +1,9 @@
 <template>
   <div id="NewsDetails">
-    <img class="banner" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png" alt="">
     <div class="container">
       <Breadcrumb></Breadcrumb>
-      <div class="news-wrapper">
+      <div class="news-container">
         <div class="title">
           <h1>环保部：14省市将在今年底前完成生态红线划定</h1>
           <div class="time">
@@ -39,11 +39,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #NewsDetails{
-  overflow: hidden;
-  .banner{
-    width: 100%;
-  }
-  .news-wrapper{
+  .news-container{
     padding: 0 0 50px;
     .title{
       border-bottom: 1px solid #eeeeee;

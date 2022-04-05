@@ -185,7 +185,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 #Contact{
-  overflow: hidden;
   .banner{
     width: 100%;
   }
