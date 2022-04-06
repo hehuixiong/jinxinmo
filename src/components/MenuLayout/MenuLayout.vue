@@ -98,18 +98,24 @@ export default {
       },
       deep: true,
       immediate: true
+    },
+    '$route' () {
+      this.setActiveMenu()
     }
   },
   mounted () {
-    if (this.$route.query && this.$route.query.active_menu) {
-      const activeMenu = this.$route.query.active_menu
-      const currentIndex = activeMenu.split('-')
-      this.menuIndex = --currentIndex[0]
-      this.subIndex = --currentIndex[1]
-      this.$emit('update:activeMenu', activeMenu)
-    }
+    this.setActiveMenu()
   },
   methods: {
+    setActiveMenu () {
+      if (this.$route.query && this.$route.query.active_menu) {
+        const activeMenu = this.$route.query.active_menu
+        const currentIndex = activeMenu.split('-')
+        this.menuIndex = --currentIndex[0]
+        this.subIndex = --currentIndex[1]
+        this.$emit('update:activeMenu', activeMenu)
+      }
+    },
     menuClick (sub, index, sunIndex, type) {
       this.menuIndex = index
       this.subIndex = sunIndex

@@ -261,6 +261,12 @@ export default {
     .map{
       height: 420px!important;
     }
+    .contact-wrapper{
+      padding: 10px 0!important;
+    }
+    .contact-we{
+      margin-bottom: 10px!important;
+    }
   }
 }
 </style>

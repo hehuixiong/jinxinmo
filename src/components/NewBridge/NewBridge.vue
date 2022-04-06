@@ -199,6 +199,7 @@ export default {
     width: 40px;
     height: 40px;
     display: none;
+    box-shadow: 0 0 6px rgb(0 0 0 / 28%);
     .nb-icon-inner-wrap{
       background-color: $--color-primary;
       border-radius: 50%;

@@ -263,5 +263,11 @@ export default {
       }
     }
   }
+  @media screen and (max-width:576px) {
+    .apply-content{
+      .el-row { margin: 0 -5px!important; }
+      .el-col { padding: 0 5px 10px!important; }
+    }
+  }
 }
 </style>
