@@ -18,8 +18,8 @@ module.exports = defineConfig({
       scss: {
         // 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
         additionalData: `
-          @import "@/assets/styles/mixin.scss";
-          @import "@/assets/styles/variables.scss";
+          @import "@/assets/scss/mixin.scss";
+          @import "@/assets/scss/variables.scss";
           `
       }
     }

@@ -16,7 +16,8 @@ const routes = [
     name: 'apply',
     component: () => import(/* webpackChunkName: "apply" */ '../views/apply/apply.vue'),
     meta: {
-      title: '应用领域'
+      title: '应用领域',
+      parentPath: '/apply'
     }
   },
   /** 联系我们 */
@@ -25,7 +26,8 @@ const routes = [
     name: 'contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/contact/contact.vue'),
     meta: {
-      title: '联系我们'
+      title: '联系我们',
+      parentPath: '/contact'
     }
   },
   /** 膜材介绍 */
@@ -34,7 +36,8 @@ const routes = [
     name: 'introduce',
     component: () => import(/* webpackChunkName: "introduce" */ '../views/introduce/introduce.vue'),
     meta: {
-      title: '膜材介绍'
+      title: '膜材介绍',
+      parentPath: '/introduce'
     }
   },
   /** 服务能力 */
@@ -43,7 +46,8 @@ const routes = [
     name: 'serves',
     component: () => import(/* webpackChunkName: "serves" */ '../views/serves/serves.vue'),
     meta: {
-      title: '服务能力'
+      title: '服务能力',
+      parentPath: '/serves'
     }
   },
   /** 新闻中心 */
@@ -72,7 +76,8 @@ const routes = [
     name: 'solution',
     component: () => import(/* webpackChunkName: "solution" */ '../views/solution/solution.vue'),
     meta: {
-      title: '解决方案'
+      title: '解决方案',
+      parentPath: '/solution'
     }
   },
   /** 关于金鑫 */
@@ -81,7 +86,8 @@ const routes = [
     name: 'about',
     component: () => import(/* webpackChunkName: "about" */ '../views/about/about.vue'),
     meta: {
-      title: '关于金鑫'
+      title: '关于金鑫',
+      parentPath: '/about'
     }
   }
 ]

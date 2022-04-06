@@ -34,10 +34,9 @@ export default {
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
 @media screen and (max-width:576px) {
-  .el-backtop{
-    right: 20px!important;
-  }
+  .el-backtop{ right: 20px!important; }
 }
 </style>

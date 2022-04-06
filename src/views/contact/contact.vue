@@ -30,39 +30,39 @@
                   <el-row>
                     <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
                       <el-form-item label="姓名" prop="name">
-                        <el-input size="small" placeholder="姓名（必填）" v-model="ruleForm.name"></el-input>
+                        <el-input size="medium" placeholder="姓名（必填）" v-model="ruleForm.name"></el-input>
                       </el-form-item>
                     </el-col>
                     <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
                       <el-form-item label="手机号码" prop="mobile">
-                        <el-input size="small" placeholder="手机号码（必填）" v-model="ruleForm.mobile"></el-input>
+                        <el-input size="medium" placeholder="手机号码（必填）" v-model="ruleForm.mobile"></el-input>
                       </el-form-item>
                     </el-col>
                   </el-row>
                   <el-row>
                     <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
                       <el-form-item label="邮箱">
-                        <el-input size="small" placeholder="邮箱" v-model="ruleForm.email"></el-input>
+                        <el-input size="medium" placeholder="邮箱" v-model="ruleForm.email"></el-input>
                       </el-form-item>
                     </el-col>
 
                     <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
                       <el-form-item label="设计领域">
-                        <el-input size="small" placeholder="设计领域" v-model="ruleForm.domain"></el-input>
+                        <el-input size="medium" placeholder="设计领域" v-model="ruleForm.domain"></el-input>
                       </el-form-item>
                     </el-col>
                   </el-row>
                   <el-row>
                     <el-col :span="24">
                       <el-form-item label="内容" prop="desc">
-                        <el-input size="small" rows="8" resize="none" placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）" type="textarea" v-model="ruleForm.desc"></el-input>
+                        <el-input size="medium" rows="8" resize="none" placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）" type="textarea" v-model="ruleForm.desc"></el-input>
                       </el-form-item>
                     </el-col>
                   </el-row>
                   <el-row>
                     <el-col :span="24">
                       <el-form-item>
-                        <el-button size="small" type="primary" @click="submitForm('ruleForm')">立即联系</el-button>
+                        <el-button size="medium" type="primary" @click="submitForm('ruleForm')">立即联系</el-button>
                       </el-form-item>
                     </el-col>
                   </el-row>
@@ -185,7 +185,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 #Contact{
-  overflow: hidden;
   .banner{
     width: 100%;
   }
@@ -243,7 +242,7 @@ export default {
       margin-top: 25px;
       p{
         color: #333333;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         margin-top: 18px;
         .iconfont{
@@ -261,6 +260,12 @@ export default {
     }
     .map{
       height: 420px!important;
+    }
+    .contact-wrapper{
+      padding: 10px 0!important;
+    }
+    .contact-we{
+      margin-bottom: 10px!important;
     }
   }
 }

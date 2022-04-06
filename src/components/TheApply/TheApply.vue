@@ -1,6 +1,6 @@
 <template>
   <div id="Apply">
-    <div class="apply-title">
+    <div class="apply-title" v-if="!hideTitle">
       <strong>应用领域</strong>
       <span>Apply</span>
     </div>
@@ -20,7 +20,7 @@
           </div>
         </el-col>
       </el-row>
-      <div class="more" v-if="showMore">
+      <div class="more" v-if="!hideMore">
         <router-link to="/apply">
           <span>
             MORE
@@ -44,9 +44,13 @@
 export default {
   name: 'ApplyCom',
   props: {
-    showMore: {
+    hideMore: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    hideTitle: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -257,6 +261,12 @@ export default {
           font-weight: bold;
         }
       }
+    }
+  }
+  @media screen and (max-width:576px) {
+    .apply-content{
+      .el-row { margin: 0 -5px!important; }
+      .el-col { padding: 0 5px 10px!important; }
     }
   }
 }
