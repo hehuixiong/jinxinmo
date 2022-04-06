@@ -6,6 +6,7 @@
       desc="solution"
       :menu="menu"
       @menu-click="handlerClick"
+      :activeMenu.sync="activeMenu"
     >
       <template slot="content">
         <div class="solution-container">
@@ -26,23 +27,40 @@ export default {
   data () {
     return {
       menu: [
-        { label: '环保设施' },
-        { label: '仓库设施' },
-        { label: '体育设施' },
-        { label: '交通设施' },
-        { label: '展览馆' },
-        { label: '商业设施' },
-        { label: '景观设施' },
-        { label: '遮阳设施' },
-        { label: '金鑫精品工程' },
-        { label: '世界著名建筑' }
+        {
+          label: '气膜设施',
+          sub: [
+            { label: '环保设施' },
+            { label: '仓库设施' },
+            { label: '体育设施' },
+            { label: '交通设施' },
+            { label: '展览馆' },
+            { label: '商业设施' }
+          ]
+        },
+        {
+          label: '张拉膜结构',
+          sub: [
+            { label: '体育设施' },
+            { label: '交通设施' },
+            { label: '景观设施' },
+            { label: '遮阳设施' },
+            { label: '商业设施' }
+          ]
+        },
+        {
+          label: '案例赏析',
+          sub: [
+            { label: '金鑫精品工程' },
+            { label: '世界著名建筑' }
+          ]
+        }
       ],
       activeMenu: '1-0'
     }
   },
   methods: {
-    handlerClick (activeMenu) {
-      this.activeMenu = activeMenu
+    handlerClick () {
     }
   }
 }

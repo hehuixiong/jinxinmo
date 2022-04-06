@@ -4,9 +4,8 @@ import router from './router'
 import store from './store'
 
 import '@/plugins/element-ui.js'
-import '@/plugins/vuejs-scroll-fixed-header.js'
 import '@/plugins/nprogress.js'
-import '@/assets/styles/index.scss'
+import '@/assets/scss/index.scss'
 
 Vue.config.productionTip = false
 // 测试*******************

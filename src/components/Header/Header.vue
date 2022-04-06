@@ -41,7 +41,7 @@
       :modal="false"
     >
       <div class="drawer-nav">
-        <div class="item" :class="{'active': item.path === parentPath}" v-for="(item, index) in nav" :key="index">
+        <div class="item" @click="close" :class="{'active': item.path === parentPath}" v-for="(item, index) in nav" :key="index">
           <router-link :to="item.path"> <span>{{item.name}}</span> <i class="el-icon-arrow-right"></i></router-link>
         </div>
       </div>
@@ -65,11 +65,6 @@ export default {
         { name: '关于金鑫', path: '/about' },
         { name: '联系我们', path: '/contact' }
       ]
-    }
-  },
-  watch: {
-    '$route' () {
-      this.close()
     }
   },
   computed: {

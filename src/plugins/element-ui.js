@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import '../assets/styles/element-variables.scss'
+import '@/assets/scss/element-variables.scss'
 import 'element-ui/lib/theme-chalk/display.css'
 
 import {

@@ -242,7 +242,7 @@ export default {
       margin-top: 25px;
       p{
         color: #333333;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         margin-top: 18px;
         .iconfont{

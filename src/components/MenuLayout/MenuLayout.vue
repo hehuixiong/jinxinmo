@@ -33,7 +33,7 @@
                 </div>
                 <template v-if="tempMenu[index].sub && tempMenu[index].sub.length && tempMenu[index].switch">
                   <ul>
-                    <li class="sub-item"
+                    <li class="sub-menu-item"
                       :class="{'is-active': subIndex === sIndex}"
                       v-for="(sub, sIndex) in tempMenu[index].sub"
                       :key="sIndex"
@@ -100,6 +100,15 @@ export default {
       immediate: true
     }
   },
+  mounted () {
+    if (this.$route.query && this.$route.query.active_menu) {
+      const activeMenu = this.$route.query.active_menu
+      const currentIndex = activeMenu.split('-')
+      this.menuIndex = --currentIndex[0]
+      this.subIndex = --currentIndex[1]
+      this.$emit('update:activeMenu', activeMenu)
+    }
+  },
   methods: {
     menuClick (sub, index, sunIndex, type) {
       this.menuIndex = index
@@ -117,6 +126,7 @@ export default {
       const currentMenuRender = !isSub && type === 'mainMenu' ? (`${++index}-0`).toString() : (`${++index}-${++sunIndex}`).toString()
       this.$emit('menu-click', currentMenuRender)
       this.$emit('update:activeMenu', currentMenuRender)
+      this.$router.push(`${this.$route.path}?active_menu=${currentMenuRender}`)
       console.log('当前菜单：', currentMenuRender)
     }
   }
@@ -180,7 +190,7 @@ export default {
           color: $--color-primary;
           font-weight: bold;
         }
-        .sub-item{
+        .sub-menu-item{
           display: flex;
           align-items: center;
           line-height: 40px;
