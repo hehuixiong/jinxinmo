@@ -1,10 +1,24 @@
 <template>
   <div id="NewBridge" class="noselect">
-    <div class="nb-nodeboard-base" ref="nbNodeboardBase" v-if="showNodeboard">
+    <div class="nb-invite-wrap" v-show="showInvite">
+      <div class="nb-invite-body">
+        <div class="el-icon-close" @click="showInvite = false"></div>
+        <div class="nb-invite-text">
+          <div class="nb-invite-welcome">
+            <p>欢迎来到金鑫膜结构设计院，请问有什么可以帮您？</p>
+          </div>
+        </div>
+        <div class="nb-invite-btn-base">
+          <div class="nb-invite-btn nb-invite-cance" @click="showInvite = false">稍后再说</div>
+          <div class="nb-invite-btn nb-invite-ok" @click="onMiddleShow">现在咨询</div>
+        </div>
+      </div>
+    </div>
+    <div class="nb-nodeboard-base" ref="nbNodeboardBase" v-show="showNodeboard">
       <div class="nb-nodeboard-contain-base">
         <div class="nb-nodeboard-top" :class="{showForm}">
           <div class="nb-head-title">留言板</div>
-          <div class="nb-nodeboard-close" @click="show">
+          <div class="nb-nodeboard-close" @click="onShow">
             <span class="el-icon-chat-square" v-if="!showForm"></span>
             <span class="el-icon-minus" v-else></span>
           </div>
@@ -39,7 +53,7 @@
         </div>
       </div>
     </div>
-    <div class="nb-icon-wrap" @click="onShowNodeboard">
+    <div class="nb-icon-wrap" @click="onMiddleShow">
       <div class="nb-icon-inner-wrap">
         <div class="nb-icon-bridge-base">
           <span class="ch">在线咨询 <i class="iconfont icon-zaixianzixun"></i></span>
@@ -47,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="nb-icon-wrap-mobile" @click="onShowNodeboard">
+    <div class="nb-icon-wrap-mobile" @click="onMiddleShow">
       <div class="nb-icon-inner-wrap">
         <span class="iconfont icon-zaixianzixun"></span>
       </div>
@@ -78,7 +92,8 @@ export default {
         ]
       },
       showForm: false,
-      showNodeboard: false
+      showNodeboard: false,
+      showInvite: true
     }
   },
   methods: {
@@ -92,7 +107,8 @@ export default {
         }
       })
     },
-    onShowNodeboard () {
+    onMiddleShow () {
+      this.showInvite = false
       this.showNodeboard = true
       this.showForm = true
       this.$nextTick(() => {
@@ -101,7 +117,7 @@ export default {
         nbNodeboardBase.style.transform = 'translate(-50%, -50%)'
       })
     },
-    show () {
+    onShow () {
       this.showForm = !this.showForm
       this.$nextTick(() => {
         const nbNodeboardBase = this.$refs.nbNodeboardBase
@@ -137,9 +153,81 @@ export default {
 </style>
 <style lang="scss" scoped>
 #NewBridge{
+  .nb-invite-wrap{
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    margin: -80px 0 0 -230px;
+    width: 372px;
+    margin-left: -186px;
+    margin-top: -88px;
+    position: fixed;
+    background: no-repeat;
+    border-radius: 3px;
+    overflow: hidden;
+    color: #000;
+    z-index: 2;
+    .nb-invite-body{
+      height: 175px;
+      background: #4587e8 url('./images/invite-body.png') no-repeat;
+      position: relative;
+      overflow: hidden;
+      .el-icon-close{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        left: auto;
+        bottom: auto;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+      }
+      .nb-invite-text{
+        position: absolute;
+        top: 44px;
+        left: 128px;
+        right: 26px;
+        font-size: 13px;
+        color: #fff;
+        .nb-invite-welcome{
+          margin: 0;
+          font-size: 13pt;
+          color: #fff;
+          word-break: break-all;
+        }
+      }
+      .nb-invite-btn-base{
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        top: auto;
+        left: auto;
+        .nb-invite-btn{
+          display: inline-block;
+          width: 80px;
+          height: 32px;
+          line-height: 32px;
+          text-align: center;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 13px;
+        }
+        .nb-invite-cance{
+          color: #fff;
+        }
+        .nb-invite-ok{
+          margin-left: 8px;
+          color: #4587e8;
+          background-color: #fff;
+        }
+      }
+    }
+  }
   .nb-nodeboard-base{
     display: block;
-    inset: auto auto 10px 20px;
+    divet: auto auto 10px 20px;
     margin-left: 0px;
     margin-top: 0px;
     height: auto;
@@ -277,6 +365,9 @@ export default {
   }
 }
 @media screen and (max-width:576px) {
+  .nb-invite-wrap{
+    display: none!important;
+  }
   .nb-icon-wrap-mobile{
     display: block!important;
   }
