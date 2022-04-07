@@ -85,7 +85,7 @@
                 <p><i class="iconfont icon-zuoji"></i> 座机：0755-32916782</p>
                 <p><i class="iconfont icon-gongzhonghao"></i> 关注金鑫公众号</p>
                 <p>
-                  <img src="@/assets/images/jxgzhewm.png" alt="">
+                  <img src="@/assets/images/jxgzhewm.png">
                 </p>
               </div>
             </el-card>

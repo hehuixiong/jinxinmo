@@ -1,6 +1,6 @@
 <template>
   <div id="About">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <MenuLayout
       title="关于金鑫"
       desc="about"
@@ -17,7 +17,7 @@
               </div>
             </el-col>
             <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-              <img src="./images/logo.png" alt="">
+              <img src="./images/logo.png">
             </el-col>
           </el-row>
           <el-row>
@@ -29,7 +29,7 @@
             </el-col>
             <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" style="float: left;">
               <div class="about-iamge">
-                <img src="./images/about1.png" alt="">
+                <img src="./images/about1.png">
                 <div class="bg"></div>
               </div>
             </el-col>

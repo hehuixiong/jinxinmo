@@ -1,6 +1,6 @@
 <template>
   <div id="News">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <MenuLayout
       :hide-vessel-title="false"
       title="新闻中心"
@@ -16,7 +16,7 @@
               <el-row>
                 <el-col :xs="24" :sm="6" :md="6" :lg="4" :xl="4">
                   <div class="nc-nl-image" @click="$router.push('/news-details')">
-                    <img src="./20220402155441.png" alt="">
+                    <img src="./20220402155441.png">
                   </div>
                 </el-col>
                 <el-col :xs="24" :sm="18" :md="18" :lg="20" :xl="20">

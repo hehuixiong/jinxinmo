@@ -1,0 +1,121 @@
+@import url('./element-ui.scss');
+@import url('./iconfont.scss');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: 14px/1.571429 "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Roboto, Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  /* 去除默认的下划线 */
+  outline: none;
+  /* 去除旧版浏览器的点击后的外虚线框 */
+  color: #000000;
+  /* 去除默认的颜色和点击后变化的颜色 */
+}
+
+// 不可选中
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  not supported by any browser */
+}
+
+.pages {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 10px);
+  padding-left: var(--bs-gutter-x, 10px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+// 回到顶部
+@media screen and (max-width: 576px) {
+  .el-backtop {
+    right: 20px !important;
+  }
+}
+
+// 进度条样式
+#nprogress .bar {
+  z-index: 99999!important;
+  background: $--color-primary;
+}
+#nprogress .spinner-icon {
+  border-top-color: $--color-primary;
+  border-left-color: $--color-primary;
+}
+#nprogress .spinner {
+  z-index: 99999!important;
+}
+@media screen and (max-width:991px) {
+  #nprogress .spinner {
+    top: 26px!important;
+    right: 50%!important;
+    transform: translateX(50%);
+  }
+}

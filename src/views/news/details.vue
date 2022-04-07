@@ -1,6 +1,6 @@
 <template>
   <div id="NewsDetails">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <div class="container">
       <Breadcrumb></Breadcrumb>
       <div class="news-container">

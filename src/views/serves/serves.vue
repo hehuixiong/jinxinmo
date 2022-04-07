@@ -1,6 +1,6 @@
 <template>
   <div id="Serves">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <MenuLayout
       title="服务能力"
       desc="server"

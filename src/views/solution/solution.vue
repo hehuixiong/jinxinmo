@@ -1,6 +1,6 @@
 <template>
   <div id="Solution">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <MenuLayout
       title="解决方案"
       desc="solution"

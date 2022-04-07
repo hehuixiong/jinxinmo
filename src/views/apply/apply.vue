@@ -1,6 +1,6 @@
 <template>
   <div id="Apply">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <div class="container">
       <TheApply hideMore></TheApply>
     </div>

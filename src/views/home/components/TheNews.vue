@@ -4,7 +4,7 @@
       <el-row>
         <el-col :xs="24" :sm="12" :md="14" :lg="14" :xl="14">
           <div class="news-images">
-            <div class="image"><img src="../images/case2.png" alt=""></div>
+            <div class="image"><img src="../images/case2.png"></div>
             <div class="news-content">
               <div class="title">
                 <strong>新闻资讯</strong>
@@ -67,7 +67,7 @@
       <el-row>
         <el-col :xs="24" :sm="12" :md="14" :lg="14" :xl="14">
           <div class="news-images">
-            <div class="image"><img src="../images/case3.png" alt=""></div>
+            <div class="image"><img src="../images/case3.png"></div>
             <div class="news-content">
               <div class="title">
                 <strong>行业动态</strong>

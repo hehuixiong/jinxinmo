@@ -5,7 +5,7 @@
         <el-row>
           <el-col :xs="24" :sm="12" :md="4" :lg="6" :xl="8">
             <div class="header-logo">
-              <img @click="$router.push('/')" src="@/assets/images/logo.png" alt="">
+              <img @click="$router.push('/')" src="@/assets/images/logo.png">
             </div>
           </el-col>
           <el-col :xs="24" :sm="12" :md="20" :lg="18" :xl="16">
@@ -22,7 +22,7 @@
       <div class="header-placeholder"></div>
       <div class="header-wrapper">
         <div class="logo">
-          <img @click="$router.push('/')" src="@/assets/images/logo.png" alt="">
+          <img @click="$router.push('/')" src="@/assets/images/logo.png">
         </div>
         <div class="menu" :class="{ 'menu-closeable': drawer }" @click="drawer = !drawer">
           <span></span>

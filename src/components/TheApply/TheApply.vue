@@ -8,7 +8,7 @@
       <el-row>
         <el-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" v-for="(item, index) in apply" :key="index">
           <div class="apply-image">
-            <img :src="item.image" alt="">
+            <img :src="item.image">
             <div class="zhezhao">
               <div class="desc">{{item.desc}}</div>
             </div>

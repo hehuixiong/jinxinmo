@@ -1,6 +1,6 @@
 <template>
   <div id="Introduce">
-    <img class="banner-image" src="@/assets/images/banner.png" alt="">
+    <img class="banner-image" src="@/assets/images/banner.png">
     <MenuLayout
       title="膜材介绍"
       desc="introduce"
@@ -12,7 +12,7 @@
         <div class="introduce-container">
           <div class="ic-pvc-container" v-show="activeMenu === '1-0'">
             <div class="ipc-images">
-              <img src="./images/etfe1.png" alt="">
+              <img src="./images/etfe1.png">
             </div>
             <div class="ipc-content">
               <p class="title">ETFE</p>
@@ -39,7 +39,7 @@
           </div>
           <div class="ic-pvc-container" v-show="activeMenu === '2-0'">
             <div class="ipc-images">
-              <img src="./images/ptfe1.png" alt="">
+              <img src="./images/ptfe1.png">
             </div>
             <div class="ipc-content">
               <p class="title">PTFE</p>
@@ -51,7 +51,7 @@
           </div>
           <div class="ic-pvc-container" v-show="activeMenu === '3-0'">
             <div class="ipc-images">
-              <img src="./images/pvc1.png" alt="">
+              <img src="./images/pvc1.png">
             </div>
             <div class="ipc-content">
               <p class="title">PVC</p>

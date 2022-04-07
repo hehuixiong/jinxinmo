@@ -3,7 +3,7 @@
     <div @mouseenter="show = true" @mouseleave="show = false">
       <el-carousel arrow="always" indicator-position="none" :interval="4000000">
         <el-carousel-item v-for="(item, index) in banner" :key="index">
-          <img :src="item" alt="">
+          <img :src="item">
           <div class="banner-bg hidden-xs-only hidden-sm-only hidden-md-only" v-show="show" @mouseenter="show = true">
             <div class="container">
               <div class="banner-box">
